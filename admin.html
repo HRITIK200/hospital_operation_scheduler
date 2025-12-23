@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Operation Scheduler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>Hospital</h2>
+    <a href="admin.html">Admin Dashboard</a>
+    <a href="doctor.html">Doctor Dashboard</a>
+    <a href="patient.html">Patient Dashboard</a>
+    <a href="index.html">Logout</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <div class="header">Admin Dashboard</div>
+
+  <!-- ADD OPERATION FORM -->
+  <div class="form-box">
+    <h3>Add New Operation</h3>
+
+    <input type="text" id="patientName" placeholder="Patient Name">
+    <input type="text" id="doctorName" placeholder="Doctor Name">
+    <input type="text" id="otId" placeholder="Operation Theater ID">
+    <input type="date" id="date">
+    <input type="time" id="time">
+    <input type="text" id="anesthesia" placeholder="Anesthesia Type">
+    <textarea id="remarks" placeholder="Remarks"></textarea>
+
+    <button id="addOperationBtn">Add Operation</button>
+  </div>
+
+  <!-- OPERATION TABLE -->
+  <div class="table-box">
+    <h3>All Operations</h3>
+
+    <table id="operationsTable">
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>OT</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Anesthesia</th>
+          <th>Remarks</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="operationList"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="admin.js"></script>
+<script type="module" src="logger.js"></script>
+
+</body>
+</html>

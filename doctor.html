@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>Hospital</h2>
+  <a href="admin.html">Admin Dashboard</a>
+  <a href="doctor.html">Doctor Dashboard</a>
+  <a href="patient.html">Patient Dashboard</a>
+  <a id="logoutBtn">Logout</a>
+</div>
+
+<div class="main">
+
+  <div class="header">Doctor Dashboard</div>
+
+  <div class="form-box">
+    <input type="text" id="doctorName" placeholder="Enter Your Name">
+    <button id="loadBtn">Load My Operations</button>
+  </div>
+
+  <div class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>OT</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Anesthesia</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody id="operationList"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script type="module" src="firebase.js"></script>
+<script type="module" src="doctor.js"></script>
+</body>
+</html>
