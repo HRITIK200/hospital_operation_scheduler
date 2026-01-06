@@ -34,6 +34,18 @@ Hospital-Operation-Scheduler/
 ├── README.md
 ```
 
+## Screenshots
+
+Screenshots of the app (located in the `screenshots/` folder):
+
+![Home page](screenshots/Home_page.png)
+
+![Admin dashboard](screenshots/Admin_dashboard.png)
+
+![Doctor dashboard](screenshots/Doctor_dashboard.png)
+
+![Patient dashboard](screenshots/Patient_dashboard.png)
+
 ## How to Run
 1. Clone the repository
 2. Configure Firebase project and add config to `firebase.js`
