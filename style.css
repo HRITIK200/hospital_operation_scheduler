@@ -1,6 +1,7 @@
 /* style.css - modern hospital theme */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+
 * { 
   margin:0; 
   padding:0; 
@@ -9,7 +10,6 @@
 
 body { 
   background: #e9f1ff; 
-  display:flex; 
   min-height:100vh; 
 }
 /* LOGIN PAGE */
@@ -24,7 +24,6 @@ body.login-page {
     display: flex;
     justify-content: center; 
     align-items: center;
-
     font-family: "Poppins", sans-serif;
 }
 
@@ -173,13 +172,16 @@ body.login-page {
   box-shadow: 0 6px 20px rgba(33,71,137,0.06); 
   margin-bottom:18px; 
 }
-.login-container { 
-  width:820px; 
-  margin: 6% auto; 
-  margin-right: 860px;
+/* Login page container ONLY */
+body.login-page .login-container { 
+  max-width: 420px;
+  width: 100%; 
+  margin: auto;
   background:#fff; 
   padding:30px;
+  border-radius:12px;
 }
+
 .form-box h3, .login-container h2 { 
   color:#0a6cf1; 
   margin-bottom:10px;
@@ -292,4 +294,77 @@ tr:hover td {
 
 .delete-btn:hover {
     background: #b21f2d;
+}
+
+/* Mobile Responsive */
+
+@media (max-width:768px) {
+
+  .sidebar {
+    display: none !important;
+  }
+
+  .main{
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 16px !important;
+  }
+
+  .header, .header1 {
+    font-size: 18px;
+    padding: 14px 16px;
+  }
+
+  .form-box {
+    padding: 16px;
+  }
+
+  input, textarea, select {
+    font-size: 14px;
+  }
+
+#addOperationBtn {
+  width: 100%;
+  max-width: 320px;
+  margin: 12px auto 0;
+  display: block;
+}
+
+.complete-btn,
+.delete-btn {
+  width: auto;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.form-box {
+  overflow-x: hidden;
+}
+
+  .table-box{
+    overflow-x: auto;
+  }
+
+  table{
+    min-width: 600px;
+  }
+
+  th, td{
+    padding: 10px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .action {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header, .header1 {
+    font-size: 16px;
+  }
+
+  .login-card {
+    padding: 20px;
+  }
 }
